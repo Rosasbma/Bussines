@@ -2,8 +2,8 @@
   "name": "Roza Arreglos",
   "short_name": "Roza",
   "description": "Panel de gestión de entregas — Roza Arreglos",
-  "start_url": ".",
-  "scope": ".",
+  "start_url": "/Bussines/",
+  "scope": "/Bussines/",
   "display": "standalone",
   "background_color": "#1E1A16",
   "theme_color": "#1E1A16",
@@ -11,13 +11,13 @@
   "lang": "es",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "/Bussines/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "icon-512.png",
+      "src": "/Bussines/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

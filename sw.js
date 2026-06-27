@@ -1,12 +1,12 @@
 // Service Worker — Roza Arreglos PWA
-const CACHE = 'roza-v2';
-const BASE = self.registration.scope;
+const CACHE = 'roza-v3';
 const ASSETS = [
-  BASE,
-  BASE + 'index.html',
-  BASE + 'icon-192.png',
-  BASE + 'icon-512.png',
-  BASE + 'manifest.json'
+  '/Bussines/',
+  '/Bussines/index.html',
+  '/Bussines/icon-192.png',
+  '/Bussines/icon-512.png',
+  '/Bussines/manifest.json',
+  '/Bussines/Logotipo_2.png'
 ];
 
 self.addEventListener('install', e => {
@@ -28,7 +28,9 @@ self.addEventListener('fetch', e => {
   if (url.includes('firebase') ||
       url.includes('google') ||
       url.includes('googleapis') ||
-      url.includes('gstatic')) {
+      url.includes('gstatic') ||
+      url.includes('fonts') ||
+      url.includes('cdnjs')) {
     return;
   }
   e.respondWith(
