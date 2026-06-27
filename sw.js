@@ -1,11 +1,12 @@
 // Service Worker — Roza Arreglos PWA
-const CACHE = 'roza-v1';
+const CACHE = 'roza-v2';
+const BASE = self.registration.scope;
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/icon-192.png',
-  '/icon-512.png',
-  '/manifest.json'
+  BASE,
+  BASE + 'index.html',
+  BASE + 'icon-192.png',
+  BASE + 'icon-512.png',
+  BASE + 'manifest.json'
 ];
 
 self.addEventListener('install', e => {
@@ -23,10 +24,8 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
-  // Solo interceptar peticiones same-origin y no Firebase
   const url = e.request.url;
-  if (!url.startsWith(self.location.origin) ||
-      url.includes('firebase') ||
+  if (url.includes('firebase') ||
       url.includes('google') ||
       url.includes('googleapis') ||
       url.includes('gstatic')) {
